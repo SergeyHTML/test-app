@@ -1,0 +1,35 @@
+.task-list{
+  th{
+    width: 20%;
+
+    &.sortable{
+      cursor: pointer;
+    }
+
+    &:first-of-type{
+      width: 50px;
+    }
+
+    &:last-of-type{
+      width: 50px;
+    }
+  }
+}
+
+.page-link{
+  cursor: pointer;
+
+  &.default{
+    cursor: default;
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
+}
+
+.completed{
+  position: relative;
+  background: rgba(128, 128, 128, 0.2);
+  font-weight: 700;
+
+}
