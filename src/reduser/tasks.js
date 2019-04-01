@@ -14,8 +14,6 @@ const DefaultReducerState = Record({
   entities: new OrderedMap({}),
   status: '',
   total_task_count: null,
-  loading: false,
-  loaded: false,
   edited: false
 });
 
@@ -32,8 +30,6 @@ export default (tasks = new DefaultReducerState(), action) => {
     case LOAD_TASKS + SUCCESS:
       return tasks
         .set('entities', arrayToMap(payload.response.message.tasks, TaskModel))
-        .set('loading', false)
-        .set('loaded', true)
         .set('status', payload.response.status)
         .set('total_task_count', payload.response.message.total_task_count);
 

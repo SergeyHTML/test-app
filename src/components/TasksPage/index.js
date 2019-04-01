@@ -9,7 +9,7 @@ import './style.scss'
 import md5 from 'md5'
 import encode from 'encode-3986'
 
-class Taskslist extends Component {
+class TasksPage extends Component {
 
   static propTypes = {
     articles: PropTypes.array,
@@ -78,4 +78,4 @@ export default connect((state) => ({
   status: state.tasks.count,
   edited: state.tasks.edited,
   user: state.signin
-}), {loadTasks, editTask})(Taskslist)
+}), {loadTasks, editTask})(TasksPage)
